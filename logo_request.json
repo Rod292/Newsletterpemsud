@@ -1,0 +1,8 @@
+{
+  "error": {
+    "code": null,
+    "message": "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY). You can obtain an API key from https://platform.openai.com/account/api-keys.",
+    "param": null,
+    "type": "invalid_request_error"
+  }
+}

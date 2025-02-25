@@ -1,0 +1,20 @@
+# Fichiers système macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Environnements virtuels Python
+newsletter_env/
+venv/
+ENV/
+
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs et fichiers temporaires
+*.log
+*.tmp 

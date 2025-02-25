@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Loyd Bretagne - Projet PEM SUD</title>
+    <link rel="stylesheet" href="newsletter_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Styles modernes pour la newsletter */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 0;
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #fff;
+            border-bottom: none;
+            position: relative;
+        }
+        .logo {
+            max-width: 140px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+        .headline {
+            background-color: #e50019;
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.4;
+            position: relative;
+            overflow: hidden;
+        }
+        .headline::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #e50019 0%, #ff6b6b 100%);
+        }
+        .content {
+            padding: 30px;
+        }
+        h1 {
+            color: #e50019;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 1.4;
+            font-weight: 700;
+        }
+        .greeting {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .intro-text {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #4a4a4a;
+        }
+        .project-photos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 15px;
+            margin: 25px 0;
+        }
+        .photo-container {
+            width: 100%;
+            margin-bottom: 0;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transform: translateY(0);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .photo-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 32px rgba(0,0,0,0.15);
+        }
+        .photo-container img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .photo-container:hover img {
+            transform: scale(1.03);
+        }
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            color: #2c3e50;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 30px 0 20px;
+            padding-bottom: 12px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: #e50019;
+            border-radius: 3px;
+        }
+        .emoji {
+            font-size: 28px;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+        .info-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            border: none;
+            transition: transform 0.3s ease;
+        }
+        .info-section:hover {
+            transform: translateY(-3px);
+        }
+        .feature-list {
+            padding-left: 25px;
+            margin: 20px 0;
+        }
+        .feature-list li {
+            margin-bottom: 12px;
+            position: relative;
+            color: #4a4a4a;
+        }
+        .feature-list li::before {
+            content: "✓";
+            color: #e50019;
+            font-weight: bold;
+            position: absolute;
+            left: -25px;
+            font-size: 16px;
+        }
+        .highlight {
+            background-color: rgba(229, 0, 25, 0.08);
+            color: #e50019;
+            padding: 4px 10px;
+            font-weight: 600;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .contact {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f2f2f2 100%);
+        }
+        .contact h2 {
+            color: #2c3e50;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #e50019 0%, #ff4b4b 100%);
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 20px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(229, 0, 25, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(229, 0, 25, 0.25);
+        }
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            font-size: 14px;
+            border-radius: 0;
+            margin-top: 60px;
+        }
+        .social-links {
+            margin: 25px 0;
+        }
+        .social-icon {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 16px;
+            transition: color 0.2s ease;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+        .social-icon:hover {
+            color: #ff4b4b;
+            opacity: 1;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 25px 0;
+        }
+        .feature-item {
+            background-color: #fff;
+            padding: 20px 15px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+        .feature-item h3 {
+            color: #2c3e50;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .feature-item p {
+            margin: 0;
+            font-size: 15px;
+            color: #4a4a4a;
+        }
+        .feature-icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #e50019;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+        .feature-icon::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(229, 0, 25, 0.08);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        /* Animation des éléments au survol */
+        .info-section, .feature-item, .photo-container, .cta-button {
+            will-change: transform;
+        }
+        /* Espace réservé pour les écrans plus petits */
+        @media screen and (max-width: 600px) {
+            .content {
+                padding: 25px 20px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            .features-grid {
+                flex-direction: column;
+            }
+            .feature-item {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER SECTION -->
+        <div class="header">
+            <img src="Logo Arthur Loyd.png" alt="Arthur Loyd Logo" class="logo">
+            <p style="margin: 0; color: #6c757d; font-size: 14px; font-weight: 500;">L'immobilier d'entreprise en Bretagne</p>
+        </div>
+        
+        <!-- HEADLINE BANNER -->
+        <div class="headline">
+            Découvrez le Projet PEM SUD<br>Un emplacement d'exception à Saint-Brieuc
+        </div>
+        
+        <div class="content">
+            <!-- GREETING & INTRODUCTION - Directement après le headline -->
+            <p class="greeting">Bonjour {{NOM_CLIENT}},</p>
+            
+            <p class="intro-text"><strong>Une opportunité exceptionnelle pour {{ENTREPRISE}}.</strong> Nous sommes ravis de vous présenter ce projet immobilier innovant situé au cœur de Saint-Brieuc. Conforme à la norme RE 2020, il offre des espaces divisibles à partir de 182,2 m², idéalement situés pour répondre à vos ambitions professionnelles.</p>
+            
+            <!-- PROJECT PHOTOS GRID - Placé plus haut avant le h1 -->
+            <div class="project-photos">
+                <div class="photo-container" style="grid-column: 1 / -1;">
+                    <img src="Project photo 1.png" alt="Vue principale du projet PEM SUD">
+                    <div class="photo-caption">Vue d'ensemble - Un projet immobilier d'exception pour votre entreprise</div>
+                </div>
+                <div class="photo-container">
+                    <img src="Project Photo 2.png" alt="Vue extérieure du projet PEM SUD">
+                    <div class="photo-caption">Façade moderne et élégante</div>
+                </div>
+                <div class="photo-container">
+                    <img src="Project photo 3.png" alt="Autre vue du projet PEM SUD">
+                    <div class="photo-caption">Vue depuis la place</div>
+                </div>
+            </div>
+            
+            <!-- TITLE & INTRODUCTION - Déplacé après les photos -->
+            <h1>Imaginez votre entreprise au cœur d'un quartier dynamique et écologique</h1>
+            
+            <!-- CTA BUTTON EARLY -->
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="mailto:contact@arthurloydbretagne.fr?subject=Demande d'information PEM SUD - {{ENTREPRISE}}" class="cta-button">En savoir plus</a>
+            </div>
+            
+            <!-- FEATURES GRID -->
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🏢</div>
+                    <h3>Espaces flexibles</h3>
+                    <p>Bureaux divisibles dès 182,2 m²</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌿</div>
+                    <h3>Écologique</h3>
+                    <p>Conforme à la norme RE 2020</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🚆</div>
+                    <h3>Accessible</h3>
+                    <p>À 2h17 de Paris en TGV</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🚲</div>
+                    <h3>Mobilité douce</h3>
+                    <p>46 places sous-sol, 60 vélos</p>
+                </div>
+            </div>
+            
+            <!-- LOCATION & SPACES COMBINED SECTION -->
+            <h2 class="section-title"><span class="emoji">📍</span>Localisation & Espaces</h2>
+            <div class="info-section">
+                <p><strong>Adresse :</strong> Boulevard Carnot, 22000 Saint-Brieuc</p>
+                <p><strong>Surface :</strong> <span class="highlight">4 540 m² SUBL</span> divisible dès <span class="highlight">182,2 m²</span></p>
+                <ul class="feature-list">
+                    <li>À 2h17 de Paris en TGV</li>
+                    <li>À 8 minutes à pied du centre-ville</li>
+                    <li>Commerces au rez-de-chaussée</li>
+                    <li>Bureaux du R+1 au R+6</li>
+                    <li>Terrasse privative de 60 m² au R+4</li>
+                    <li>46 places de stationnement en sous-sol</li>
+                </ul>
+            </div>
+            
+            <!-- AVAILABILITY SECTION -->
+            <h2 class="section-title"><span class="emoji">📅</span>Disponibilité</h2>
+            <div class="info-section">
+                <p><strong>Date de Disponibilité :</strong> 1er trimestre 2027</p>
+                <p><strong>Conditions :</strong> Informations détaillées sur demande.</p>
+            </div>
+            
+            <!-- CONTACT SECTION -->
+            <div class="contact">
+                <h2><span class="emoji">📞</span> Contactez-nous</h2>
+                <p>Pour plus d'informations sur ce projet d'exception :</p>
+                <p><strong>Arthur Loyd Bretagne</strong><br>
+                Téléphone : <a href="tel:0298462814" style="color: #e50019; text-decoration: none; font-weight: 600;">02 98 46 28 14</a><br>
+                Email : <a href="mailto:contact@arthurloydbretagne.fr" style="color: #e50019; text-decoration: none; font-weight: 600;">contact@arthurloydbretagne.fr</a><br>
+                Site web : <a href="https://www.arthur-loyd-brest.com/" style="color: #e50019; text-decoration: none; font-weight: 600;">www.arthur-loyd-brest.com</a></p>
+                <div style="text-align: center;">
+                    <a href="mailto:contact@arthurloydbretagne.fr?subject=Demande d'information PEM SUD - {{ENTREPRISE}}" class="cta-button">Demander plus d'informations</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FOOTER SECTION -->
+        <div class="footer">
+            <img src="Logo Arthur Loyd.png" alt="Arthur Loyd Logo" style="width: 120px; margin-bottom: 25px; filter: brightness(1.1);">
+            <p>Nous espérons que ce projet retiendra votre attention et nous serions ravis de vous accompagner dans vos futurs investissements immobiliers.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/arthur-loyd-bretagne/" class="social-icon">LinkedIn</a> |
+                <a href="https://www.instagram.com/arthurloydbretagne/" class="social-icon">Instagram</a> |
+                <a href="https://www.arthur-loyd-brest.com/" class="social-icon">Site Web</a>
+            </div>
+            <p style="margin-top: 15px; opacity: 0.8;">© 2025 Arthur Loyd Bretagne. Tous droits réservés.</p>
+        </div>
+    </div>
+</body>
+</html> 

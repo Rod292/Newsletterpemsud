@@ -1,0 +1,22 @@
+# Dépendances pour le script d'envoi de newsletter
+# Python 3.6+ recommandé
+
+# Bibliothèques standards (incluses avec Python)
+# smtplib
+# email
+# argparse
+# csv
+# logging
+# datetime
+
+# Si vous utilisez un serveur SMTP avec authentification SSL:
+pyOpenSSL>=21.0.0
+pyasn1>=0.4.8
+pyasn1-modules>=0.2.8
+service-identity>=21.1.0
+
+# Pour le traitement d'images (optionnel)
+Pillow>=9.0.0
+
+# Pour la gestion des environnements (optionnel)
+python-dotenv>=0.19.0 
