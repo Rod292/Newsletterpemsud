@@ -16,6 +16,27 @@
             line-height: 1.6;
             background-color: #f8f9fa;
         }
+        
+        /* Style forcé pour tous les liens */
+        a {
+            color: #e50019 !important;
+            text-decoration: none !important;
+        }
+        
+        /* Styles pour les boutons CTA */
+        .cta-button {
+            display: inline-block;
+            background: #e50019 !important;
+            color: white !important;
+            padding: 16px 32px;
+            text-decoration: none !important;
+            border-radius: 50px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 20px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(229, 0, 25, 0.2);
+        }
         .container {
             max-width: 650px;
             margin: 0 auto;
@@ -27,10 +48,10 @@
         }
         .header {
             text-align: center;
-            padding: 20px 0;
-            background-color: #fff;
-            border-bottom: none;
-            position: relative;
+            padding: 25px 0;
+            background-color: #ffffff;
+            border-top: 5px solid #e50019;
+            border-radius: 16px 16px 0 0;
         }
         .logo {
             max-width: 140px;
@@ -40,7 +61,7 @@
         .headline {
             background-color: #e50019;
             color: white;
-            padding: 25px 30px;
+            padding: 30px;
             text-align: center;
             font-family: 'Montserrat', sans-serif;
             font-size: 22px;
@@ -48,7 +69,7 @@
             margin: 0;
             line-height: 1.4;
             position: relative;
-            overflow: hidden;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
         }
         .headline::after {
             content: '';
@@ -57,10 +78,11 @@
             left: 0;
             width: 100%;
             height: 6px;
-            background: linear-gradient(90deg, #e50019 0%, #ff6b6b 100%);
+            background-color: #e50019;
         }
         .content {
             padding: 30px;
+            background-color: #ffffff;
         }
         h1 {
             color: #e50019;
@@ -70,24 +92,29 @@
             text-align: center;
             line-height: 1.4;
             font-weight: 700;
+            background-color: #ffffff;
         }
         .greeting {
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: #2c3e50;
+            letter-spacing: 0.3px;
+            background-color: #ffffff;
         }
         .intro-text {
             font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-            color: #4a4a4a;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: #333333;
+            background-color: #ffffff;
         }
         .project-photos {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 15px;
             margin: 25px 0;
+            background-color: #ffffff;
         }
         .photo-container {
             width: 100%;
@@ -98,6 +125,8 @@
             box-shadow: 0 8px 16px rgba(0,0,0,0.1);
             transform: translateY(0);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
         }
         .photo-container:hover {
             transform: translateY(-5px);
@@ -117,8 +146,8 @@
             left: 0;
             right: 0;
             padding: 20px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            color: white;
+            background-color: rgba(0,0,0,0.85);
+            color: #ffffff;
             font-weight: 600;
             font-size: 16px;
             text-align: center;
@@ -133,6 +162,7 @@
             margin: 30px 0 20px;
             padding-bottom: 12px;
             position: relative;
+            background-color: #ffffff;
         }
         .section-title::after {
             content: '';
@@ -144,18 +174,27 @@
             background-color: #e50019;
             border-radius: 3px;
         }
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 6px;
+            height: 100%;
+            background-color: #e50019;
+        }
         .emoji {
             font-size: 28px;
             margin-right: 15px;
             vertical-align: middle;
         }
         .info-section {
-            background-color: #fff;
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 12px;
             margin: 20px 0;
             box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-            border: none;
+            border: 1px solid #e0e0e0;
             transition: transform 0.3s ease;
         }
         .info-section:hover {
@@ -164,35 +203,38 @@
         .feature-list {
             padding-left: 25px;
             margin: 20px 0;
+            background-color: #ffffff;
         }
         .feature-list li {
             margin-bottom: 12px;
             position: relative;
-            color: #4a4a4a;
+            color: #333333;
+            background-color: #ffffff;
         }
         .feature-list li::before {
             content: "✓";
             color: #e50019;
-            font-weight: bold;
             position: absolute;
             left: -25px;
-            font-size: 16px;
+            top: 0;
+            font-weight: bold;
         }
         .highlight {
-            background-color: rgba(229, 0, 25, 0.08);
+            background-color: #ffeeee;
             color: #e50019;
             padding: 4px 10px;
             font-weight: 600;
             border-radius: 4px;
             display: inline-block;
+            border: 1px solid rgba(229,0,25,0.2);
         }
         .contact {
-            background-color: #f9f9f9;
-            padding: 25px;
-            border-radius: 12px;
+            background-color: #f8f9fa;
+            padding: 40px;
+            border-radius: 16px;
             margin-top: 30px;
             text-align: center;
-            background: linear-gradient(135deg, #f9f9f9 0%, #f2f2f2 100%);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
         .contact h2 {
             color: #2c3e50;
@@ -200,31 +242,15 @@
             margin-bottom: 20px;
             text-align: center;
             font-weight: 700;
-        }
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #e50019 0%, #ff4b4b 100%);
-            color: white;
-            padding: 16px 32px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-family: 'Montserrat', sans-serif;
-            margin-top: 20px;
-            text-align: center;
-            box-shadow: 0 6px 12px rgba(229, 0, 25, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            letter-spacing: 0.5px;
-            border: none;
-            cursor: pointer;
+            background-color: #f9f9f9;
         }
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(229, 0, 25, 0.25);
         }
         .footer {
-            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
-            color: #fff;
+            background-color: #2c3e50;
+            color: #ffffff;
             padding: 50px 20px;
             text-align: center;
             font-size: 14px;
@@ -233,15 +259,17 @@
         }
         .social-links {
             margin: 25px 0;
+            background-color: #2c3e50;
         }
         .social-icon {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
             margin: 0 12px;
             font-size: 16px;
             transition: color 0.2s ease;
             opacity: 0.9;
             font-weight: 600;
+            background-color: rgba(255,255,255,0.1);
         }
         .social-icon:hover {
             color: #ff4b4b;
@@ -252,15 +280,16 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             margin: 25px 0;
+            background-color: #ffffff;
         }
         .feature-item {
-            background-color: #fff;
+            background-color: #ffffff;
             padding: 20px 15px;
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0,0,0,0.06);
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.04);
+            border: 1px solid #e0e0e0;
         }
         .feature-item:hover {
             transform: translateY(-5px);
@@ -272,11 +301,13 @@
             margin-bottom: 10px;
             font-size: 18px;
             font-weight: 700;
+            background-color: #ffffff;
         }
         .feature-item p {
             margin: 0;
             font-size: 15px;
-            color: #4a4a4a;
+            color: #333333;
+            background-color: #ffffff;
         }
         .feature-icon {
             font-size: 30px;
@@ -285,6 +316,7 @@
             display: inline-block;
             position: relative;
             z-index: 1;
+            background-color: #ffffff;
         }
         .feature-icon::after {
             content: '';
@@ -317,121 +349,287 @@
                 margin-bottom: 15px;
             }
         }
+        /* Ajout de styles pour les icônes spécifiques */
+        .icon-container {
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+        }
+        .localisation-icon {
+            content: '📍';
+            color: #e50019;
+            font-size: 24px;
+        }
+        .calendar-icon {
+            content: '📅';
+            color: #e50019;
+            font-size: 24px;
+        }
+        /* Styles pour la barre rouge verticale */
+        .section-container {
+            position: relative;
+            padding-left: 20px;
+            margin-top: 30px;
+            background-color: #ffffff;
+        }
+        .red-bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 6px;
+            height: 100%;
+            background-color: #e50019;
+            border-radius: 3px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- HEADER SECTION -->
-        <div class="header">
-            <img src="Logo Arthur Loyd.png" alt="Arthur Loyd Logo" class="logo">
-            <p style="margin: 0; color: #6c757d; font-size: 14px; font-weight: 500;">L'immobilier d'entreprise en Bretagne</p>
+    <div class="container" style="background-color: #ffffff;">
+        <!-- HEADER SECTION - Amélioration avec un fond fixe -->
+        <div class="header" style="text-align: center; padding: 25px 0; background-color: #ffffff; border-top: 5px solid #e50019; border-radius: 16px 16px 0 0;">
+            <img src="cid:logo" alt="Arthur Loyd Logo" class="logo" style="max-width: 140px; height: auto; margin-bottom: 5px;">
+            <p style="margin: 0; color: #6c757d; font-size: 14px; font-weight: 500; letter-spacing: 0.5px; background-color: #ffffff;">L'immobilier d'entreprise en Bretagne</p>
         </div>
         
-        <!-- HEADLINE BANNER -->
-        <div class="headline">
+        <!-- HEADLINE BANNER - Amélioration avec une couleur fixe -->
+        <div class="headline" style="background-color: #e50019; color: white; padding: 30px; text-align: center; font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 700; margin: 0; line-height: 1.4; position: relative; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
             Découvrez le Projet PEM SUD<br>Un emplacement d'exception à Saint-Brieuc
         </div>
         
-        <div class="content">
-            <!-- GREETING & INTRODUCTION - Directement après le headline -->
-            <p class="greeting">Bonjour {{NOM_CLIENT}},</p>
+        <div class="content" style="padding: 35px; background-color: #ffffff;">
+            <!-- GREETING & INTRODUCTION - Amélioration de la typographie -->
+            <p class="greeting" style="font-size: 19px; font-weight: 600; margin-bottom: 15px; color: #2c3e50; letter-spacing: 0.3px; background-color: #ffffff;">Bonjour {{NOM_CLIENT}},</p>
             
-            <p class="intro-text"><strong>Une opportunité exceptionnelle pour {{ENTREPRISE}}.</strong> Nous sommes ravis de vous présenter ce projet immobilier innovant situé au cœur de Saint-Brieuc. Conforme à la norme RE 2020, il offre des espaces divisibles à partir de 182,2 m², idéalement situés pour répondre à vos ambitions professionnelles.</p>
+            <p class="intro-text" style="font-size: 16px; line-height: 1.8; margin-bottom: 25px; color: #333333; background-color: #ffffff;"><strong style="color: #2c3e50; background-color: #ffffff;">Une opportunité exceptionnelle pour {{ENTREPRISE}}.</strong><br>Nous sommes ravis de vous présenter ce projet immobilier innovant situé au cœur de Saint-Brieuc. Conforme à la norme RE 2020, il offre des espaces divisibles à partir de 182,2 m², idéalement situés pour répondre à vos ambitions professionnelles.</p>
             
-            <!-- PROJECT PHOTOS GRID - Placé plus haut avant le h1 -->
-            <div class="project-photos">
-                <div class="photo-container" style="grid-column: 1 / -1;">
-                    <img src="Project photo 1.png" alt="Vue principale du projet PEM SUD">
-                    <div class="photo-caption">Vue d'ensemble - Un projet immobilier d'exception pour votre entreprise</div>
-                </div>
-                <div class="photo-container">
-                    <img src="Project Photo 2.png" alt="Vue extérieure du projet PEM SUD">
-                    <div class="photo-caption">Façade moderne et élégante</div>
-                </div>
-                <div class="photo-container">
-                    <img src="Project photo 3.png" alt="Autre vue du projet PEM SUD">
-                    <div class="photo-caption">Vue depuis la place</div>
-                </div>
+            <!-- PROJECT PHOTOS GRID - Amélioration avec des ombres et des effets visuels -->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 30px 0; background-color: #ffffff;">
+                <!-- Photo principale - toujours en pleine largeur -->
+                <tr>
+                    <td style="padding-bottom: 15px;">
+                        <div class="photo-container" style="width: 100%; margin-bottom: 0; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 24px rgba(0,0,0,0.15); border: 1px solid #e0e0e0;">
+                            <img src="cid:project_photo_1" alt="Vue principale du projet PEM SUD" style="width: 100%; display: block; max-height: 350px; object-fit: contain;">
+                            <div style="padding: 15px; background-color: rgba(0,0,0,0.85); color: #ffffff; font-weight: 600; font-size: 14px; text-align: center; letter-spacing: 0.5px; border-top: 1px solid rgba(255,255,255,0.2);">Vue d'ensemble - Un projet immobilier d'exception pour votre entreprise</div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Photos 2 et 3 côte à côte sur desktop, empilées sur mobile -->
+                <tr>
+                    <td>
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <!-- Photo 2 -->
+                                <td width="49%" valign="top">
+                                    <div class="photo-container" style="width: 100%; margin-bottom: 0; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 16px rgba(0,0,0,0.15); border: 1px solid #e0e0e0;">
+                                        <img src="cid:project_photo_2" alt="Vue extérieure du projet PEM SUD" style="width: 100%; display: block; height: 200px; object-fit: cover;">
+                                        <div style="padding: 10px; background-color: rgba(0,0,0,0.85); color: #ffffff; font-weight: 600; font-size: 14px; text-align: center; letter-spacing: 0.5px; border-top: 1px solid rgba(255,255,255,0.2);">Façade moderne et élégante</div>
+                                    </div>
+                                </td>
+                                <!-- Espace entre les photos -->
+                                <td width="2%" style="display: inline-block;">&nbsp;</td>
+                                <!-- Photo 3 -->
+                                <td width="49%" valign="top">
+                                    <div class="photo-container" style="width: 100%; margin-bottom: 0; position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 16px rgba(0,0,0,0.15); border: 1px solid #e0e0e0;">
+                                        <img src="cid:project_photo_3" alt="Autre vue du projet PEM SUD" style="width: 100%; display: block; height: 200px; object-fit: cover;">
+                                        <div style="padding: 10px; background-color: rgba(0,0,0,0.85); color: #ffffff; font-weight: 600; font-size: 14px; text-align: center; letter-spacing: 0.5px; border-top: 1px solid rgba(255,255,255,0.2);">Vue depuis la gare</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            
+            <!-- TITLE & INTRODUCTION - Design plus compact -->
+            <div style="background-color: #ffffff; padding: 0; border-radius: 8px; margin-bottom: 10px;">
+                <h1 style="color: #2c3e50; font-family: 'Montserrat', sans-serif; font-size: 26px; margin: 0 0 15px 0; text-align: center; line-height: 1.4; font-weight: 700; letter-spacing: 0.5px; position: relative; padding-bottom: 10px; background-color: #ffffff;">
+                    Imaginez votre entreprise au cœur d'un quartier dynamique et écologique
+                    <span style="display: block; width: 80px; height: 3px; background-color: #e50019; margin: 10px auto 0; border-radius: 3px;"></span>
+                </h1>
             </div>
             
-            <!-- TITLE & INTRODUCTION - Déplacé après les photos -->
-            <h1>Imaginez votre entreprise au cœur d'un quartier dynamique et écologique</h1>
-            
-            <!-- CTA BUTTON EARLY -->
-            <div style="text-align: center; margin: 30px 0;">
-                <a href="mailto:contact@arthurloydbretagne.fr?subject=Demande d'information PEM SUD - {{ENTREPRISE}}" class="cta-button">En savoir plus</a>
+            <!-- CTA BUTTON EARLY - Design plus compact -->
+            <div style="text-align: center; margin: 15px 0 25px 0; background-color: #ffffff;">
+                <a href="mailto:contact@arthurloydbretagne.fr?subject=Demande d'information PEM SUD - {{ENTREPRISE}}" style="display: inline-block; background-color: #e50019; color: #ffffff !important; font-family: 'Montserrat', Arial, sans-serif; font-size: 16px; font-weight: 600; text-decoration: none; padding: 14px 30px; border-radius: 50px; box-shadow: 0 4px 10px rgba(229,0,25,0.3); letter-spacing: 0.5px;">En savoir plus</a>
             </div>
             
-            <!-- FEATURES GRID -->
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">🏢</div>
-                    <h3>Espaces flexibles</h3>
-                    <p>Bureaux divisibles dès 182,2 m²</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🌿</div>
-                    <h3>Écologique</h3>
-                    <p>Conforme à la norme RE 2020</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🚆</div>
-                    <h3>Accessible</h3>
-                    <p>À 2h17 de Paris en TGV</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🚲</div>
-                    <h3>Mobilité douce</h3>
-                    <p>46 places sous-sol, 60 vélos</p>
-                </div>
+            <!-- Séparateur visuel élégant - Plus compact -->
+            <div style="background-color: #ffffff; padding: 0; margin: 15px 0;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td width="45%" style="border-bottom: 1px solid #e0e0e0;"></td>
+                        <td width="10%" align="center" style="font-size: 18px; color: #e50019; background-color: #ffffff;">●</td>
+                        <td width="45%" style="border-bottom: 1px solid #e0e0e0;"></td>
+                    </tr>
+                </table>
             </div>
+            
+            <!-- FEATURES GRID - Grille 2x2 comme demandé -->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 30px 0; background-color: #ffffff;">
+                <tr>
+                    <td>
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff;">
+                            <tr>
+                                <td width="49%" valign="top" style="padding-bottom: 15px;">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; border: 1px solid #e0e0e0; height: 220px; min-height: 220px;">
+                                        <tr>
+                                            <td align="center" style="padding: 25px 15px;">
+                                                <div style="font-size: 32px; margin-bottom: 15px; color: #e50019; display: inline-block; background-color: rgba(229,0,25,0.08); width: 60px; height: 60px; line-height: 60px; border-radius: 50%;">🏢</div>
+                                                <h3 style="color: #2c3e50; font-family: 'Montserrat', sans-serif; margin-bottom: 12px; font-size: 18px; font-weight: 700; letter-spacing: 0.5px; background-color: #ffffff;">Espaces flexibles</h3>
+                                                <p style="margin: 0; font-size: 15px; color: #333333; line-height: 1.6; background-color: #ffffff;">Bureaux divisibles dès 182,2 m²</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="49%" valign="top" style="padding-bottom: 15px;">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; border: 1px solid #e0e0e0; height: 220px; min-height: 220px;">
+                                        <tr>
+                                            <td align="center" style="padding: 25px 15px;">
+                                                <div style="font-size: 32px; margin-bottom: 15px; color: #e50019; display: inline-block; background-color: rgba(229,0,25,0.08); width: 60px; height: 60px; line-height: 60px; border-radius: 50%;">🌿</div>
+                                                <h3 style="color: #2c3e50; font-family: 'Montserrat', sans-serif; margin-bottom: 12px; font-size: 18px; font-weight: 700; letter-spacing: 0.5px; background-color: #ffffff;">Écologique</h3>
+                                                <p style="margin: 0; font-size: 15px; color: #333333; line-height: 1.6; background-color: #ffffff;">Conforme à la norme RE 2020</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="49%" valign="top">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; border: 1px solid #e0e0e0; height: 220px; min-height: 220px;">
+                                        <tr>
+                                            <td align="center" style="padding: 25px 15px;">
+                                                <div style="font-size: 32px; margin-bottom: 15px; color: #e50019; display: inline-block; background-color: rgba(229,0,25,0.08); width: 60px; height: 60px; line-height: 60px; border-radius: 50%;">🚆</div>
+                                                <h3 style="color: #2c3e50; font-family: 'Montserrat', sans-serif; margin-bottom: 12px; font-size: 18px; font-weight: 700; letter-spacing: 0.5px; background-color: #ffffff;">Accessible</h3>
+                                                <p style="margin: 0; font-size: 15px; color: #333333; line-height: 1.6; background-color: #ffffff;">À 2h17 de Paris en TGV</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="49%" valign="top">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; border: 1px solid #e0e0e0; height: 220px; min-height: 220px;">
+                                        <tr>
+                                            <td align="center" style="padding: 25px 15px;">
+                                                <div style="font-size: 32px; margin-bottom: 15px; color: #e50019; display: inline-block; background-color: rgba(229,0,25,0.08); width: 60px; height: 60px; line-height: 60px; border-radius: 50%;">🚲</div>
+                                                <h3 style="color: #2c3e50; font-family: 'Montserrat', sans-serif; margin-bottom: 12px; font-size: 18px; font-weight: 700; letter-spacing: 0.5px; background-color: #ffffff;">Mobilité douce</h3>
+                                                <p style="margin: 0; font-size: 15px; color: #333333; line-height: 1.6; background-color: #ffffff;">46 places sous-sol, 60 vélos</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
             
             <!-- LOCATION & SPACES COMBINED SECTION -->
-            <h2 class="section-title"><span class="emoji">📍</span>Localisation & Espaces</h2>
-            <div class="info-section">
-                <p><strong>Adresse :</strong> Boulevard Carnot, 22000 Saint-Brieuc</p>
-                <p><strong>Surface :</strong> <span class="highlight">4 540 m² SUBL</span> divisible dès <span class="highlight">182,2 m²</span></p>
-                <ul class="feature-list">
-                    <li>À 2h17 de Paris en TGV</li>
-                    <li>À 8 minutes à pied du centre-ville</li>
-                    <li>Commerces au rez-de-chaussée</li>
-                    <li>Bureaux du R+1 au R+6</li>
-                    <li>Terrasse privative de 60 m² au R+4</li>
-                    <li>46 places de stationnement en sous-sol</li>
+            <div style="background-color: #ffffff; padding: 10px; border-radius: 8px; margin-top: 20px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 15px 0 10px 0;">
+                    <tr>
+                        <td width="6" style="background-color: #e50019; padding: 0;" valign="top">&nbsp;</td>
+                        <td width="15" style="padding: 0;"></td>
+                        <td style="padding: 0;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td valign="middle" style="padding-right: 10px; color: #e50019; font-size: 24px; text-shadow: 0 1px 1px rgba(0,0,0,0.1);">📍</td>
+                                    <td valign="middle">
+                                        <h2 style="color: #2c3e50; font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 700; margin: 0; padding-bottom: 12px; letter-spacing: 0.5px;">Localisation & Espaces</h2>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="info-section" style="background-color: #ffffff; padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.04); border-left: 3px solid #e50019; border: 1px solid #e0e0e0;">
+                <p style="color: #333333;"><strong style="color: #333333;">Adresse :</strong> Boulevard Carnot, 22000 Saint-Brieuc</p>
+                <p style="color: #333333;"><strong style="color: #333333;">Surface :</strong> <span style="background-color: #ffeeee; color: #e50019; padding: 4px 10px; font-weight: 600; border-radius: 4px; display: inline-block; border: 1px solid rgba(229,0,25,0.2);">4 540 m² SUBL</span> divisible dès <span style="background-color: #ffeeee; color: #e50019; padding: 4px 10px; font-weight: 600; border-radius: 4px; display: inline-block; border: 1px solid rgba(229,0,25,0.2);">182,2 m²</span></p>
+                <ul style="padding-left: 25px; margin: 20px 0; list-style: none;">
+                    <li style="margin-bottom: 12px; position: relative; color: #333333;"><span style="color: #e50019; position: absolute; left: -25px;">✓</span> À 2h17 de Paris en TGV</li>
+                    <li style="margin-bottom: 12px; position: relative; color: #333333;"><span style="color: #e50019; position: absolute; left: -25px;">✓</span> À 8 minutes à pied du centre-ville</li>
+                    <li style="margin-bottom: 12px; position: relative; color: #333333;"><span style="color: #e50019; position: absolute; left: -25px;">✓</span> Commerces au rez-de-chaussée</li>
+                    <li style="margin-bottom: 12px; position: relative; color: #333333;"><span style="color: #e50019; position: absolute; left: -25px;">✓</span> Bureaux du R+1 au R+6</li>
+                    <li style="margin-bottom: 12px; position: relative; color: #333333;"><span style="color: #e50019; position: absolute; left: -25px;">✓</span> Terrasse privative de 60 m² au R+4</li>
+                    <li style="margin-bottom: 12px; position: relative; color: #333333;"><span style="color: #e50019; position: absolute; left: -25px;">✓</span> 46 places de stationnement en sous-sol</li>
                 </ul>
             </div>
             
-            <!-- AVAILABILITY SECTION -->
-            <h2 class="section-title"><span class="emoji">📅</span>Disponibilité</h2>
-            <div class="info-section">
-                <p><strong>Date de Disponibilité :</strong> 1er trimestre 2027</p>
-                <p><strong>Conditions :</strong> Informations détaillées sur demande.</p>
+            <!-- AVAILABILITY SECTION - Amélioration cohérente avec la section précédente -->
+            <div style="background-color: #ffffff; padding: 10px; border-radius: 8px; margin-top: 20px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 15px 0 10px 0;">
+                    <tr>
+                        <td width="6" style="background-color: #e50019; padding: 0;" valign="top">&nbsp;</td>
+                        <td width="15" style="padding: 0;"></td>
+                        <td style="padding: 0;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td valign="middle" style="padding-right: 10px; color: #e50019; font-size: 24px; text-shadow: 0 1px 1px rgba(0,0,0,0.1);">📅</td>
+                                    <td valign="middle">
+                                        <h2 style="color: #2c3e50; font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 700; margin: 0; padding-bottom: 12px; letter-spacing: 0.5px;">Disponibilité</h2>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="info-section" style="background-color: #ffffff; padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.04); border-left: 3px solid #e50019; border: 1px solid #e0e0e0;">
+                <p style="color: #333333;"><strong style="color: #333333; font-size: 17px;">Date de Disponibilité :</strong> <span style="font-size: 16px; color: #333333;">1er trimestre 2027</span></p>
+                <p style="color: #333333;"><strong style="color: #333333; font-size: 17px;">Conditions :</strong> <span style="font-size: 16px; color: #333333;">Informations détaillées sur demande.</span></p>
             </div>
             
-            <!-- CONTACT SECTION -->
-            <div class="contact">
-                <h2><span class="emoji">📞</span> Contactez-nous</h2>
-                <p>Pour plus d'informations sur ce projet d'exception :</p>
-                <p><strong>Arthur Loyd Bretagne</strong><br>
-                Téléphone : <a href="tel:0298462814" style="color: #e50019; text-decoration: none; font-weight: 600;">02 98 46 28 14</a><br>
-                Email : <a href="mailto:contact@arthurloydbretagne.fr" style="color: #e50019; text-decoration: none; font-weight: 600;">contact@arthurloydbretagne.fr</a><br>
-                Site web : <a href="https://www.arthur-loyd-brest.com/" style="color: #e50019; text-decoration: none; font-weight: 600;">www.arthur-loyd-brest.com</a></p>
-                <div style="text-align: center;">
-                    <a href="mailto:contact@arthurloydbretagne.fr?subject=Demande d'information PEM SUD - {{ENTREPRISE}}" class="cta-button">Demander plus d'informations</a>
-                </div>
+            <!-- Séparateur visuel élégant -->
+            <div style="background-color: #ffffff; padding: 10px; border-radius: 8px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 20px 0;">
+                    <tr>
+                        <td width="45%" style="border-bottom: 1px solid #e0e0e0;"></td>
+                        <td width="10%" align="center" style="font-size: 18px; color: #e50019; background-color: #ffffff;">●</td>
+                        <td width="45%" style="border-bottom: 1px solid #e0e0e0;"></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- BOUTON CTA FINAL -->
+            <div style="text-align: center; margin: 40px 0; background-color: #ffffff;">
+                <a href="mailto:contact@arthurloydbretagne.fr?subject=Demande d'information PEM SUD - {{ENTREPRISE}}" style="display: inline-block; background: linear-gradient(135deg, #e50019, #c70016); color: #ffffff !important; font-family: 'Montserrat', Arial, sans-serif; font-size: 16px; font-weight: 600; text-decoration: none; padding: 18px 36px; border-radius: 50px; box-shadow: 0 8px 20px rgba(229,0,25,0.3); letter-spacing: 0.5px; text-transform: uppercase;">Demander plus d'informations</a>
             </div>
         </div>
         
         <!-- FOOTER SECTION -->
-        <div class="footer">
-            <img src="Logo Arthur Loyd.png" alt="Arthur Loyd Logo" style="width: 120px; margin-bottom: 25px; filter: brightness(1.1);">
-            <p>Nous espérons que ce projet retiendra votre attention et nous serions ravis de vous accompagner dans vos futurs investissements immobiliers.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/company/arthur-loyd-bretagne/" class="social-icon">LinkedIn</a> |
-                <a href="https://www.instagram.com/arthurloydbretagne/" class="social-icon">Instagram</a> |
-                <a href="https://www.arthur-loyd-brest.com/" class="social-icon">Site Web</a>
+        <div class="footer" style="background-color: #2c3e50; color: #ffffff; padding: 50px 20px; text-align: center; font-size: 14px; border-radius: 0 0 16px 16px; margin-top: 60px; line-height: 1.8;">
+            <img src="cid:logo" alt="Arthur Loyd Logo" style="width: 120px; margin-bottom: 25px; filter: brightness(1.1);">
+            <p style="margin-bottom: 20px; max-width: 500px; margin-left: auto; margin-right: auto; color: #ffffff; background-color: #2c3e50;">Nous espérons que ce projet retiendra votre attention et nous serions ravis de vous accompagner dans vos futurs investissements immobiliers.</p>
+            
+            <!-- Séparateur dans le footer -->
+            <div style="width: 50px; height: 3px; background-color: rgba(255,255,255,0.3); margin: 25px auto;"></div>
+            
+            <div class="social-links" style="margin: 25px 0; background-color: #2c3e50;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 400px; margin: 0 auto; background-color: #2c3e50;">
+                    <tr>
+                        <td align="center" width="33.33%" style="padding: 5px;">
+                            <a href="https://www.linkedin.com/company/arthur-loyd-bretagne/" style="color: #ffffff !important; text-decoration: none; font-size: 16px; font-weight: 600; display: block; padding: 8px 5px; border-radius: 4px; background-color: rgba(255,255,255,0.1); white-space: nowrap;">LinkedIn</a>
+                        </td>
+                        <td align="center" width="33.33%" style="padding: 5px;">
+                            <a href="https://www.instagram.com/arthurloydbretagne/" style="color: #ffffff !important; text-decoration: none; font-size: 16px; font-weight: 600; display: block; padding: 8px 5px; border-radius: 4px; background-color: rgba(255,255,255,0.1); white-space: nowrap;">Instagram</a>
+                        </td>
+                        <td align="center" width="33.33%" style="padding: 5px;">
+                            <a href="https://www.arthur-loyd-brest.com/" style="color: #ffffff !important; text-decoration: none; font-size: 16px; font-weight: 600; display: block; padding: 8px 5px; border-radius: 4px; background-color: rgba(255,255,255,0.1); white-space: nowrap;">Site Web</a>
+                        </td>
+                    </tr>
+                </table>
             </div>
-            <p style="margin-top: 15px; opacity: 0.8;">© 2025 Arthur Loyd Bretagne. Tous droits réservés.</p>
+            <p style="margin-top: 15px; opacity: 0.8; color: #ffffff; background-color: #2c3e50;">© 2025 Arthur Loyd Bretagne. Tous droits réservés.</p>
+            <!-- Bouton de désinscription amélioré -->
+            <div style="margin-top: 20px; padding: 10px; border-top: 1px solid rgba(255,255,255,0.1); background-color: #2c3e50;">
+                <a href="mailto:contact@arthurloydbretagne.fr?subject=Désinscription newsletter&body=Je souhaite me désinscrire de votre liste de diffusion." style="color: #ffffff !important; text-decoration: underline; font-size: 13px; opacity: 0.7;">Se désinscrire de cette liste de diffusion</a>
+            </div>
         </div>
     </div>
 </body>
